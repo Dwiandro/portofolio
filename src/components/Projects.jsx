@@ -1,3 +1,5 @@
+import { PROJECTS } from "../constants";
+
 const Projects = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
