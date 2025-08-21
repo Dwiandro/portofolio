@@ -2,41 +2,51 @@ import { PROJECTS } from "../constants";
 
 const Projects = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
-      <h2 className="my-20 text-center text-4xl">Project</h2>
+    <section className="border-b border-neutral-900 py-16">
+      <h2 className="mb-12 text-center text-4xl font-bold">Projects</h2>
+
       <div className="flex flex-col items-center">
-        <p className="mb-8 text-center text-neutral-400">
-          Here are some of my projects that I have worked on.
+        <p className="mb-12 max-w-2xl text-center text-neutral-400">
+          Here are some of the projects I have worked on, covering both frontend
+          and backend development.
         </p>
       </div>
-      <div>
+
+      <div className="flex flex-col gap-16">
         {PROJECTS.map((project, index) => (
-          <div key={index} className="flex flex-wrap lg:justify-center">
-            <div className="w-full lg:w-1/4">
+          <div
+            key={index}
+            className="flex flex-col items-center gap-8 lg:flex-row lg:items-start lg:gap-12"
+          >
+            {/* Project Image */}
+            <div className="w-full lg:w-1/3">
               <img
                 src={project.image}
-                width={300}
-                height={300}
                 alt={project.title}
-                className="mb-6 rounded"
+                className="w-full rounded-2xl shadow-lg transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <div className="w-full max-w-xl lg:w-3/4">
-              <h6 className="mb-2 font-semibold ">{project.title}</h6>
+
+            {/* Project Details */}
+            <div className="w-full lg:w-2/3">
+              <h3 className="mb-3 text-2xl font-semibold">{project.title}</h3>
               <p className="mb-4 text-neutral-400">{project.description}</p>
-              {project.technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  className="mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900 "
-                >
-                  {tech}
-                </span>
-              ))}
+
+              <div className="flex flex-wrap gap-2">
+                {project.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="rounded-full bg-neutral-800 px-3 py-1 text-sm font-medium text-purple-400"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
