@@ -11,19 +11,19 @@ const Technologies = () => {
         <div className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-105 hover:border-white transition-transform duration-300 ease-in-out">
           <FaHtml5 className="text-5xl lg:text-7xl text-[#E34F26]" />
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-105 hover:border-white transition-transform duration-300 ease-in-out">
           <FaCss3 className="text-5xl lg:text-7xl text-[#264DE4]" />
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-105 hover:border-white transition-transform duration-300 ease-in-out">
           <RiReactjsLine className="text-5xl lg:text-7xl text-cyan-400" />
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-105 hover:border-white transition-transform duration-300 ease-in-out">
           <TbBrandNextjs className="text-5xl lg:text-7xl" />
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-105 hover:border-white transition-transform duration-300 ease-in-out">
           <FaNodeJs className="text-5xl lg:text-7xl text-green-500" />
         </div>
-        <div className="rounded-2xl border-4 border-neutral-800 p-4">
+        <div className="rounded-2xl border-4 border-neutral-800 p-4 hover:scale-105 hover:border-white transition-transform duration-300 ease-in-out">
           <SiMysql className="text-5xl lg:text-7xl text-[#00758F]" />
         </div>
       </div>
