@@ -4,14 +4,19 @@ const Projects = () => {
   return (
     <div className="border-b border-neutral-900 pb-4">
       <h2 className="my-20 text-center text-4xl">Project</h2>
+      <div className="flex flex-col items-center">
+        <p className="mb-8 text-center text-neutral-400">
+          Here are some of my projects that I have worked on.
+        </p>
+      </div>
       <div>
         {PROJECTS.map((project, index) => (
           <div key={index} className="flex flex-wrap lg:justify-center">
             <div className="w-full lg:w-1/4">
               <img
                 src={project.image}
-                width={150}
-                height={150}
+                width={300}
+                height={300}
                 alt={project.title}
                 className="mb-6 rounded"
               />
