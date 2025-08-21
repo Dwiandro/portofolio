@@ -1,7 +1,5 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import project1 from "../assets/projects/project-1.png";
+import project2 from "../assets/projects/project-2.png";
 
 export const HERO_CONTENT =
   "Hi, I'm Afdhal — a Front-End Developer passionate about turning ideas into responsive, user-centric websites. Specializing in Next.js, React.js, JavaScript, and modern web tech, I build interfaces that blend creativity with functionality. Let's bring your vision to life!";
@@ -11,15 +9,15 @@ export const ABOUT_TEXT =
 export const EXPERIENCES = [
   {
     year: "2025 - Present",
-    role: "Full Stack Developer",
-    description: ``,
+    role: "Freelance - Fullstack Developer",
+    description: `Developing end-to-end web applications from UI/UX design, frontend implementation with React & TailwindCSS, backend API creation using Node.js, to database integration and authentication with Supabase. Experienced in building interactive landing pages and admin dashboards for data management needs.`,
     technologies: ["HTML", "Tailwindcss", "React", "Node.js", "Supabase"],
   },
   {
     year: "2025 - Present",
-    role: "Full Stack Developer",
-    description: ``,
-    technologies: ["HTML", "Tailwindcss", "Php", "tailwindcss"],
+    role: "Freelance - Fullstack Developer",
+    description: `Developing a company landing page based on PHP with a modern and responsive design using Tailwind CSS. Involved in frontend implementation, as well as integrating dynamic content to make the website more interactive and easier to manage.`,
+    technologies: ["HTML", "Tailwindcss", "JavaScript", "Php"],
   },
 ];
 
@@ -27,16 +25,14 @@ export const PROJECTS = [
   {
     title: "Landing Page & Admin Dashboard",
     image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+    description: `Developing a landing page and admin dashboard for BUMDes Sirah Dayueh as an information medium and internal management system. The landing page displays the profile, business units, and potential of the village, while the admin dashboard is used for data management and user authentication.`,
     technologies: ["HTML", "Tailwindcss", "React", "Node.js", "Supabase"],
   },
   {
-    title: "Landing page ",
+    title: "Landing Page Company",
     image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "Tailwindcss", "Php", "tailwindcss"],
+    description: `Building a landing page for a company focused on information technology development. This website showcases the company profile, services, news, and collaboration features with a professional, responsive, and easy-to-access design. Built using PHP for a simple backend and Tailwind CSS for a modern look.`,
+    technologies: ["HTML", "Tailwindcss", "JavaScript", "Php"],
   },
 ];
 
