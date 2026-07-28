@@ -1,9 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-100 antialiased selection:bg-yellow-400/30 selection:text-yellow-200 overflow-x-hidden;
+  background-color: #09090b;
+}
+
+/* Custom Scrollbar - Dark Minimal */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Minimalist Clean Card Utility Classes */
+.minimal-card {
+  background: #121215;
+  border: 1px solid #27272a;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+}
+
+.minimal-card-hover {
+  @apply transition-all duration-300;
+}
+
+.minimal-card-hover:hover {
+  border-color: rgba(250, 204, 21, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px -4px rgba(250, 204, 21, 0.08);
+}
+
+.minimal-pill {
+  background: #18181b;
+  border: 1px solid #27272a;
+}
+
+/* Yellow Highlight Utilities */
+.text-yellow-accent {
+  color: #facc15;
+}
+
+.bg-yellow-accent {
+  background-color: #facc15;
+  color: #09090b;
+}
+
+.border-yellow-accent {
+  border-color: #facc15;
 }
