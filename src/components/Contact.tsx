@@ -7,7 +7,7 @@ const Contact: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 relative bg-zinc-950 border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-yellow-400 text-xs font-mono mb-3">
@@ -67,15 +67,15 @@ const Contact: React.FC = () => {
             Mari <span className="text-yellow-400">Bekerja Sama</span>
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base max-w-2xl mt-2">
-            Terbuka untuk peluang Management Trainee (Technology & Data), posisi Web Developer, kolaborasi project, atau diskusi teknis.
+            Terbuka untuk peluang posisi Web Developer, kolaborasi project, atau diskusi teknis.
           </p>
         </div>
 
         <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Left Column: Direct Contact Info Cards */}
           <div className="lg:col-span-5 space-y-4">
-            
+
             {/* Email Card */}
             <div className="contact-anime opacity-0 minimal-card p-6 rounded-2xl border border-zinc-800 minimal-card-hover flex items-center justify-between">
               <div className="flex items-center gap-4">

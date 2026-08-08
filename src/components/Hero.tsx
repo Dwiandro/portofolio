@@ -11,7 +11,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
   const [activeFocus, setActiveFocus] = useState<"tech" | "ops">("tech");
   const heroRef = useRef<HTMLDivElement>(null);
-  
+
   // Stat animated values state
   const [counts, setCounts] = useState<{ [key: number]: number }>({ 0: 0, 1: 0, 2: 0, 3: 0 });
 
@@ -48,6 +48,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
           translateY: [-6, 6],
           rotate: [-2, 2],
           duration: 3000,
+          alternate: true,
           delay: stagger(400),
           direction: "alternate",
           loop: true,
@@ -74,16 +75,16 @@ const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
   return (
     <section ref={heroRef} className="relative min-h-screen pt-28 pb-16 flex items-center justify-center bg-zinc-950 overflow-hidden">
-      
+
       {/* Clean Minimalist Background Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:28px_28px] opacity-20 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Left Column: Headline & Intro */}
           <div className="lg:col-span-7 flex flex-col items-start">
-            
+
             {/* Status Tag */}
             <div className="hero-stagger opacity-0 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-yellow-400 text-xs font-mono mb-6 shadow">
               <span className="w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span>
@@ -110,22 +111,20 @@ const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
             <div className="hero-stagger opacity-0 flex items-center gap-2 p-1 bg-zinc-900 border border-zinc-800 rounded-xl mb-6 max-w-full">
               <button
                 onClick={() => setActiveFocus("tech")}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                  activeFocus === "tech"
-                    ? "bg-yellow-400 text-zinc-950 font-bold shadow"
-                    : "text-zinc-400 hover:text-white"
-                }`}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${activeFocus === "tech"
+                  ? "bg-yellow-400 text-zinc-950 font-bold shadow"
+                  : "text-zinc-400 hover:text-white"
+                  }`}
               >
                 <FaCode />
                 <span>Teknologi & Data</span>
               </button>
               <button
                 onClick={() => setActiveFocus("ops")}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                  activeFocus === "ops"
-                    ? "bg-yellow-400 text-zinc-950 font-bold shadow"
-                    : "text-zinc-400 hover:text-white"
-                }`}
+                className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold transition-all ${activeFocus === "ops"
+                  ? "bg-yellow-400 text-zinc-950 font-bold shadow"
+                  : "text-zinc-400 hover:text-white"
+                  }`}
               >
                 <FaBolt />
                 <span>Crew Volunteer & Ops</span>
@@ -186,7 +185,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
 
           {/* Right Column: Hero Profile Card & Floating Badge Animations */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end relative">
-            
+
             {/* Floating Tech Badges */}
             <div className="hero-floating-badge absolute -top-4 -left-4 z-20 hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-zinc-900/90 border border-yellow-400/50 text-yellow-400 font-mono text-xs shadow-lg backdrop-blur-md">
               <FaBrain /> <span>Gemini RAG AI</span>
@@ -205,7 +204,7 @@ const Hero: React.FC<HeroProps> = ({ onOpenCvModal }) => {
                     alt={PERSONAL_INFO.name}
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                   />
-                  
+
                   {/* Overlay Badge Top */}
                   <div className="absolute top-3 left-3 px-3 py-1 rounded-lg bg-zinc-950/90 border border-zinc-800 text-yellow-400 text-[11px] font-mono flex items-center gap-1.5">
                     <FaCode /> <span>Fullstack & RAG AI</span>

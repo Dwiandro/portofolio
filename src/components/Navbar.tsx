@@ -43,20 +43,16 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenCvModal }) => {
   return (
     <header
       ref={navRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-zinc-950/90 border-b border-zinc-800 py-3 shadow-lg shadow-black/60"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
+
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group cursor-pointer">
-            <div className="w-10 h-10 rounded-lg bg-yellow-400 flex items-center justify-center text-zinc-950 font-bold group-hover:scale-105 transition-transform shadow-md shadow-yellow-400/10">
-              <FaCode className="text-lg" />
-            </div>
             <div className="flex flex-col">
               <span className="font-extrabold text-lg tracking-tight text-white group-hover:text-yellow-400 transition-colors">
                 Afdhal <span className="text-yellow-400">Dwiandro</span>
